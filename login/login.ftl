@@ -9,7 +9,7 @@
 
       <!-- Logo -->
       <div class="logo-section">
-        <img src="resources/assets/img/ABB-grey.png" alt="AL Barid Bank" />
+        <img src="resources/img/ABB-grey.png" alt="AL Barid Bank" />
         <p>Sign in to your account</p>
       </div>
 
