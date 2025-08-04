@@ -1,0 +1,387 @@
+/* Keycloak Login Theme - Yellow and Grey */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #9e989891;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+#kc-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+#kc-container-wrapper {
+    width: 100%;
+}
+
+#kc-form {
+    width: 100%;
+}
+
+#kc-form-wrapper {
+    width: 100%;
+}
+
+.horizontal-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* Logo Section */
+/* .logo-section {
+    text-align: center;
+    margin-bottom: 2rem;
+} */
+
+.logo-section {
+    flex-shrink: 0;
+    width: 300px;
+    text-align: center;
+}
+
+.logo-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo-section {
+    flex-shrink: 0;
+    width: 300px;
+    text-align: center;
+}
+
+.logo-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo-placeholder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: #fbbf24;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: #374151;
+    transition: transform 0.2s ease;
+}
+
+.logo-placeholder:hover {
+    transform: translateY(-2px);
+}
+
+.logo-section h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.logo-section p {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+/* Login Form */
+.login-form {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    width: 400px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 12px 12px 44px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9fafb;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.input-wrapper input:hover {
+    background-color: white;
+    border-color: #fbbf24;
+}
+
+.input-wrapper input:focus {
+    background-color: white;
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+    z-index: 3;
+}
+
+.toggle-password:hover {
+    color: #6b7280;
+}
+
+/* Form Options */
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    accent-color: #fbbf24;
+}
+
+.forgot-password {
+    font-size: 0.875rem;
+    color: #d97706;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+    color: #b45309;
+}
+
+/* Submit Button */
+.login-btn,
+#kc-login {
+    width: 100% !important;
+    background-color: #fbbf24 !important;
+    color: #374151 !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    padding: 12px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    transform: translateY(0) !important;
+    margin: 0 !important;
+}
+
+.login-btn:hover,
+#kc-login:hover {
+    background-color: #f59e0b !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3) !important;
+}
+
+.login-btn:active,
+#kc-login:active {
+    transform: translateY(0) !important;
+}
+
+/* Keycloak Form Buttons */
+#kc-form-buttons {
+    margin-bottom: 0;
+}
+
+/* Divider */
+.divider {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.signup-link {
+    text-align: center;
+}
+
+.signup-link p {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.signup-link a {
+    color: #d97706;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.signup-link a:hover {
+    color: #b45309;
+}
+
+/* Social Providers */
+#kc-social-providers {
+    margin-top: 1rem;
+}
+
+#kc-social-providers a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #374151;
+    background-color: #f9fafb;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+#kc-social-providers a:hover {
+    background-color: white;
+    border-color: #fbbf24;
+    transform: translateY(-1px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer p {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Error Messages */
+#input-error,
+.kc-feedback-text {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #kc-container {
+        padding: 0.5rem;
+    }
+    
+    .login-form {
+        padding: 1.5rem;
+    }
+    
+    .logo-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+/* Animation for form appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-form {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.logo-section {
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+/* Keycloak specific overrides */
+.kc-dropdown {
+    position: relative;
+}
+
+/* Override Keycloak default styles */
+#kc-page-title {
+    display: none;
+}
+
+#kc-header {
+    display: none;
+}
+
+.kc-login-tooltip {
+    display: none;
+}
+
+/* Ensure proper spacing */
+#kc-content {
+    width: 100%;
+}
+
+#kc-content-wrapper {
+    width: 100%;
+}
